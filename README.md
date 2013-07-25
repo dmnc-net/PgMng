@@ -9,7 +9,7 @@ Pre-generated blocks version: 1.5.x
 
 Installation
 ------------
-    $ git clone https://github.com/pavian/pgmng.git
+    $ git clone https://github.com/pavian/PgMng.git
     $ chmod +x pgmng_install
     $ ./pgmng_install
 
