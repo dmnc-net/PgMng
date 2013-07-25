@@ -18,10 +18,8 @@ Installation
 Usage
 -----
 1. open pgmng.cfg and follow your instincts
-2. run pgmng in the desired mode:
-
-    # ./pgmng full
-    # ./pgmng incr
+2. run pgmng in the desired mode `full` or `incr`
+    # ./pgmng mode
 
 
 TODO
