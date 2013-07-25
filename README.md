@@ -19,6 +19,7 @@ Usage
 -----
 1. open pgmng.cfg and follow your instincts
 2. run pgmng in the desired mode:
+
     # ./pgmng full
     # ./pgmng incr
 
