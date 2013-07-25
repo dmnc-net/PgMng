@@ -1,7 +1,9 @@
+-=NEWS=-
+Pre-generated blocks version: 1.5.x
+I found that many filenames has been changed in 1.6.2, so new blocks file comming (not so) soon...
+
 pgmng
 =====
-
-Pigmap Manager
 
 INSTALLATION
 1) # chmod +x pgmng_install
