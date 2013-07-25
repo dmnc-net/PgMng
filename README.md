@@ -5,28 +5,25 @@ PgMng
 News
 ----
 Pre-generated blocks version: 1.5.x
-* I found that many filenames has been changed in 1.6.2, so new blocks png comming (not so) soon...
 
 
 Installation
 ------------
-    # git clone https://github.com/pavian/pgmng.git
-    # chmod +x pgmng_install
-    # ./pgmng_install
+    $ git clone https://github.com/pavian/pgmng.git
+    $ chmod +x pgmng_install
+    $ ./pgmng_install
 
 
 Usage
 -----
-1. Open `pgmng.cfg` and follow your instincts
-2. Run `pgmng` in the desired mode `full` for initial render and `incr` for incremental (i.e. by cron)
-
-    # ./pgmng full
-    # ./pgmng incr
+1. Open `pgmng.cfg` and follow your instincts.
+2. Run `pgmng` in the desired mode `./pgmng full` for initial render and `./pgmng incr` for incremental (i.e. by cron).
 
 
 Todo
 ----
-Everything and nothing :)
+* I found that many filenames has been changed in 1.6.2, so new blocks png comming (not so) soon...
+* Everything and nothing :)
 
 
 Credits
