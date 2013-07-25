@@ -14,7 +14,8 @@ make
 echo -e "\n* copying files..."
 cp $BINARY ..
 cp style.css template.html ../$TEMPLATEDIR
-cp blockdescriptor.list blocktextures.list ../$BLOCKDIR
+
+#cp blockdescriptor.list blocktextures.list ../$BLOCKDIR
 
 
 echo
@@ -25,5 +26,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     rm -rf $SRCDIR
 fi
 
-
-# chmod -x $0
+chmod +x pgmng
+chmod -x $0
