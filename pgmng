@@ -1,0 +1,36 @@
+#!/bin/bash
+cd ${0%/*}
+source pgmng.cfg
+WORLDDIR=$MCDIR/$WORLD
+INPUTDIR=$SYNCDIR/$WORLD
+mkdir -p $OUTDIR
+
+function renameHtml {
+    if [ -f $OUTDIR/pigmap-default.html ]; then mv $OUTDIR/pigmap-default.html $OUTDIR/index.html; fi 
+}
+
+function sync {
+    rsync=`which rsync`
+    $rsync -va $WORLDDIR $SYNCDIR | head -n -3| tail -n +3 > $SYNCDIR/$WORLD-changes
+}
+
+function do_full {
+    if $SYNCONFULL; then sync; else INPUTDIR=$WORLDDIR; fi
+    ./$BINARY -t $THREADS -B $BLOCKSIZE -T $TILEMULTIPLIER -i $INPUTDIR -o $OUTDIR -g $BLOCKDIR -m $TEMPLATEDIR
+}
+
+function do_incr {
+    sync
+    ./$BINARY -t $THREADS -i $INPUTDIR -o $OUTDIR -r $SYNCDIR/$WORLD-changes -g $BLOCKDIR -m $TEMPLATEDIR -x
+}
+
+
+echo -e "\nPigmap Manager v2\nby dmnc_net, 2013\n-----------------\n"
+
+if [ "$1" == "" ]; then echo " * missing render type parameter [full|incr]"; false; exit; else
+    case $1 in
+	"full") do_full;;
+	"incr") do_incr;;
+    esac
+    renameHtml
+fi

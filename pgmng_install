@@ -1,0 +1,29 @@
+#!/bin/bash
+
+source pgmng.cfg
+REPO="https://github.com/akudeukie/pigmap.git"
+
+echo -e "\nPigmap Manager: install\nv0.1beta, dmnc_net 2013\n-----------------------"
+echo -e "\n* creating directories..."
+mkdir -p $TEMPLATEDIR $SYNCDIR $BLOCKDIR
+echo -e "\n* downloading pugmap source files..."
+git clone $REPO $SRCDIR
+echo -e "\n* compiling pigmap..."
+cd $SRCDIR
+make
+echo -e "\n* copying files..."
+cp $BINARY ..
+cp style.css template.html ../$TEMPLATEDIR
+cp blockdescriptor.list blocktextures.list ../$BLOCKDIR
+
+
+echo
+read -p "[?] Remove pigmap sources? (y/n) " -n 1 -r
+echo 
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "* Cleaning..."
+    rm -rf $SRCDIR
+fi
+
+
+# chmod -x $0
