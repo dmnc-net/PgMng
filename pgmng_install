@@ -14,9 +14,9 @@ make
 echo -e "\n* copying files..."
 cp $BINARY ..
 cp style.css template.html ../$TEMPLATEDIR
-
 #cp blockdescriptor.list blocktextures.list ../$BLOCKDIR
 
+cd ..
 
 echo
 read -p "[?] Remove pigmap sources? (y/n) " -n 1 -r
