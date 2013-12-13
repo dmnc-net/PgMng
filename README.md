@@ -4,12 +4,13 @@ PgMng
 
 News
 ----
-Pre-generated blocks version: 1.5.x
+Pre-generated blocks version: 1.6/1.7
 
 
 Installation
 ------------
     $ git clone https://github.com/pavian/PgMng.git
+    $ cd PgMng
     $ chmod +x pgmng_install
     $ ./pgmng_install
 

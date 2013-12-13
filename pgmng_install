@@ -3,7 +3,7 @@
 source pgmng.cfg
 REPO="https://github.com/akudeukie/pigmap.git"
 
-echo -e "\nPigmap Manager: install\nv0.1beta, dmnc_net 2013\n-----------------------"
+echo -e "\nPigmap Manager: install\nv0.11beta, dmnc_net 2013\n-----------------------"
 echo -e "\n* creating directories..."
 mkdir -p $TEMPLATEDIR $SYNCDIR $BLOCKDIR
 echo -e "\n* downloading pugmap source files..."
@@ -14,8 +14,8 @@ make
 echo -e "\n* copying files..."
 cp $BINARY ..
 cp style.css template.html ../$TEMPLATEDIR
-#cp blockdescriptor.list blocktextures.list ../$BLOCKDIR
-
+cp blockdescriptor.list blocktextures.list ../$BLOCKDIR
+cp -r textures ../$BLOCKDIR
 cd ..
 
 echo
