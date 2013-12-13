@@ -23,7 +23,6 @@ Usage
 
 Todo
 ----
-* I found that many filenames has been changed in 1.6.2, so new blocks png comming (not so) soon...
 * Everything and nothing :)
 
 
@@ -36,4 +35,4 @@ Credits
 
 Other stuff
 -----------
-* [Pigmap win32 build](http://techblog.dmnc.net/2013/06/pigmap-windows.html)
+* [Pigmap win32 build](http://tmblr.co/ZGYvap-awc7O)
